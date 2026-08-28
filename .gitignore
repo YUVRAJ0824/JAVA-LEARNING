@@ -1,0 +1,15 @@
+# Compiled bytecode
+*.class
+
+# IntelliJ project files
+.idea/
+*.iml
+
+# Build output folders (javac/IntelliJ default output)
+out/
+bin/
+target/
+
+# OS junk
+.DS_Store
+Thumbs.db
