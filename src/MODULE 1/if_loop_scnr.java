@@ -1,4 +1,7 @@
-import java.util.Scanner; // STEP 1: IMPORT. Scanner is a built-in Java class, but it lives in the java.util package. You must import it before using it.
+import java.util.Arrays;
+import java.util.Scanner;
+// STEP 1: IMPORT. Scanner is a built-in Java class
+// but it lives in the java.util package.
 
 public class if_loop_scnr {
     public static void main(String[] args) {
@@ -45,7 +48,8 @@ public class if_loop_scnr {
                  * If the condition is false, it skips to the 'else' block and executes that instead.
                  */
                 int a = 5;
-                if (a <= 5) {
+                if (a <= 5)
+                {
                     System.out.println("yes, " + a + " is less than or equal to 5.");
                 } else {
                     System.out.println("no");
@@ -114,7 +118,8 @@ public class if_loop_scnr {
                  */
                 System.out.println("While loop counting to 3:");
                 int w = 1;
-                while (w <= 3) {
+                while (w <= 3)
+                {
                     System.out.print(w + " ");
                     w++;
                 }
@@ -123,7 +128,7 @@ public class if_loop_scnr {
 
             case 6:
                 /*
-                 * HOW DO-WHILE LOOP WORKS:
+                 *  DO-WHILE LOOP WORKS:
                  * Very similar to the while loop, but the condition is checked AFTER the block executes.
                  * This means the code inside the 'do' block is guaranteed to run AT LEAST ONCE,
                  * even if the condition is false from the very beginning.
@@ -147,7 +152,7 @@ public class if_loop_scnr {
                  * - You don't need to manually create an index counter or check the array length.
                  */
                 String[] fruits = {"Apple", "Banana", "Mango", "Cherry"};
-
+// visit every elements in array or collection with out using index values
                 System.out.println("Printing array elements using for-each:");
                 for (String fruit : fruits) {
                     System.out.println("I like " + fruit);
@@ -161,5 +166,6 @@ public class if_loop_scnr {
 
         // STEP 3: CLOSE. Always close your scanner when you are completely done reading inputs.
         scanner.close();
+
     }
 }
