@@ -1,4 +1,4 @@
-public class Operations {
+public class OPERATORS_AND_OPERANDS {
 
     public static void main(String[] args) {
 

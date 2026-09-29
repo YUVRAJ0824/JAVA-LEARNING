@@ -3,7 +3,7 @@ import java.util.Scanner;
 // STEP 1: IMPORT. Scanner is a built-in Java class
 // but it lives in the java.util package.
 
-public class if_loop_scnr {
+public class CONDITIONAL_STATEMENTS {
     public static void main(String[] args) {
 
         /*

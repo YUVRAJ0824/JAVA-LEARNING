@@ -1,5 +1,5 @@
 
-public class dt {
+public class DATATYPES {
 
     public static void main(String[] args){
         /*dt has two types

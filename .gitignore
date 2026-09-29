@@ -1,3 +1,14 @@
+/name/ ignores a folder named name at the project root. name/ can match that folder at any level
+.
+*.tmp ignores files ending in .tmp, like notes.tmp. *. would match names that end with a dot, so use the full extension.
+.name matches a file literally named .name. 
+The starting dot often marks a hidden file, but Git doesn’t automatically treat every dotfile as junk. For example,
+ .gitignore and .editorconfig are useful files.
+
+
+!name can allow a matching file back if an earlier rule ignored it. !keep.tmp allows keep.tmp even if an earlier rule ignores it;
+ then use git add keep.tmp.
+
 # Compiled bytecode
 *.class
 
@@ -9,6 +20,9 @@
 out/
 bin/
 target/
+
+# Local learning plan
+/java-master-sheet.md
 
 # OS junk
 .DS_Store
