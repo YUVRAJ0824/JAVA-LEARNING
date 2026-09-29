@@ -2,9 +2,7 @@ public class OPERATORS_AND_OPERANDS {
 
     public static void main(String[] args) {
 
-        // ==========================================
         // 1. TERNARY OPERATOR (Short if-else)
-        // ==========================================
         // Syntax: (condition) ? valueIfTrue : valueIfFalse;
         int n = 6;
         n += 11; // n is now 17
@@ -23,9 +21,7 @@ public class OPERATORS_AND_OPERANDS {
         System.out.println("Greeting: " + greeting);
 
 
-        // ==========================================
         // 2. OPERATOR CATEGORIES
-        // ==========================================
         /*
          * Arithmetic: +, -, *, /, % (Math)
          * Unary: ++, --, ! (Increase, decrease, or NOT)
@@ -36,18 +32,14 @@ public class OPERATORS_AND_OPERANDS {
          */
 
 
-        // ==========================================
         // 3. BITWISE OPERATORS
-        // ==========================================
         int res = ~10;
         System.out.printf("\nBitwise NOT of 10 is: %d\n", res);
         // ~ is One's Complement. It flips every 0 to 1 and every 1 to 0.
         // In Java, ~x always equals (-x - 1) because of how negatives are stored.
 
 
-        // ==========================================
         // 4. LOGICAL AND BOOLEAN OPERATORS
-        // ==========================================
         // Standard naming convention for booleans: start with is, has, was, etc.
         boolean isItem = true;
 
@@ -66,9 +58,7 @@ public class OPERATORS_AND_OPERANDS {
         }
 
 
-        // ==========================================
         // 5. ASSIGNMENT & MATH OPERATORS
-        // ==========================================
         int x = 10;
         x %= 20; // % is modulo (gets the remainder of 10 divided by 20)
         System.out.println("x after mod: " + x);
@@ -77,9 +67,7 @@ public class OPERATORS_AND_OPERANDS {
         System.out.println("x after div: " + x);
 
 
-        // ==========================================
         // 6. OPERATOR PRECEDENCE (Order of Operations)
-        // ==========================================
         System.out.println("\n--- Operator Precedence ---");
         // Java follows standard math rules: Parentheses () first, then *, /, % before +, -
 /*
@@ -169,9 +157,7 @@ Operators higher in this list are evaluated before operators lower in the list. 
         System.out.println("(5 + 3) * 2 = " + forcedResult); // 16
 
 
-        // ==========================================
         // 7. COMPARING OBJECTS VS. PRIMITIVES
-        // ==========================================
         System.out.println("\n--- Objects vs Primitives ---");
 
         // Primitives (int, boolean, double, char) use == to compare actual values
@@ -187,9 +173,7 @@ Operators higher in this list are evaluated before operators lower in the list. 
         System.out.println("Objects with .equals() (Text Value check): " + str1.equals(str2)); // TRUE
 
 
-        // ==========================================
         // 8. SPECIAL JAVA OPERATORS
-        // ==========================================
         System.out.println("\n--- Special Operators ---");
 
         // A. instanceof: Checks if an object belongs to a specific Class type
