@@ -80,7 +80,7 @@ public class CONDITIONAL_STATEMENTS {
                  * The inner condition is ONLY checked if the outer condition evaluates to true.
                  * Useful for checking prerequisites (e.g., must be 18 first, THEN check weight).
                  */
-                int age = 20;
+                int age= scanner.nextInt();
                 int weight = 60;
                 if (age >= 18) {
                     System.out.println("Age is 18 or older.");
