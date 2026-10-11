@@ -9,7 +9,7 @@ public class TYPE_CONVERSION {
    /*
    Type Conversion: The broad term for changing a value from one data type to another (either automatically by Java or manually by you).
    Type Casting: Specifically means manual conversion where you force it using parentheses (e.g., (int) myDouble).
-   Widening: Converting a smaller type to a bigger type (e.g., int $\rightarrow$ double). It happens automatically.
+    Widening: Converting a smaller type to a bigger type (e.g., int to double). It happens automatically, but can still lose precision (for example, long to float).
    Narrowing: Converting a bigger type to a smaller type (e.g., double $\rightarrow$ int). It requires manual casting.
 
 Widening is also called: Implicit Conversion or Promotion (because Java "promotes" it to a bigger size safely).

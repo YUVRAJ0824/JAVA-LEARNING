@@ -20,9 +20,11 @@ The starting dot often marks a hidden file, but Git doesn’t automatically trea
 out/
 bin/
 target/
-
+// /=ingnore a folder to git 
 # Local learning plan
 /java-master-sheet.md
+/INTERSHIP/
+/src/INTERSHIP/
 
 # OS junk
 .DS_Store

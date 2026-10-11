@@ -2,39 +2,31 @@ import java.util.*;
 public class DATATYPES {
 
     public static void main(String[] args){
-        /*dt has two types
-         primitive dt form of stack memory
-   var is a reusable container for a value to store
-         1byte=8bits
-         int    4byte    whole numbers
-         double  8byte    finance
-         char  2byte     single letters
-         boolean   jvm depended
-
-         rare dt's
-         byte 1byte   used in 1/0 case
-         short  2byte  used in old db like year (don't use much)
-         long(L or l) 8byte   used in long counter like phone no etc ,use lower l or caps L (suggested L)
-         float(f) 4 byte   used in decimal points like temp ,rare use msolty game code etc
-         void  return nothing used with methods no var deu to error so ok
-
-
-         standards
-
-         int phone=39083739l; compile time error
-         long phone=38981379L; correct
-         long phone=8798369l; correct
-
-          small l,f or big L,F is supported,but use caps always!
-
-
-
-         reference where stack memory address store in heap
-         array
-         string
-         object
-
-         sop("name"+dt);    space is allowed in quotes for gap
+          /*
+           * Java data types:
+           * Primitive types store simple values. Their values are not always stored on the stack;
+           * where a value lives depends on how it is used.
+           *
+           * byte    1 byte    small whole numbers
+           * short   2 bytes   whole numbers
+           * int     4 bytes   whole numbers
+           * long    8 bytes   large whole numbers (use L for the suffix, like 123L)
+           * float   4 bytes   decimal numbers (use f for the suffix, like 3.14f)
+           * double  8 bytes   decimal numbers with more precision than float
+           * char    2 bytes   one UTF-16 code unit, written in single quotes like 'A'
+           * boolean           true or false; Java does not define its storage size
+           *
+           * String, arrays, and other objects are reference types, not primitive types.
+           * A reference variable refers to an object; Java does not promise that every
+           * variable is stored in a particular memory area.
+           *
+           * Use String for phone numbers and other identifiers because you do not do math
+           * with them and they can contain leading zeroes or symbols.
+           * Use BigDecimal for decimal calculations that need exact currency values.
+           * void is a method return type meaning the method does not return a value.
+           *
+           * A long literal can use L or l, but uppercase L is easier to read:
+           * long population = 8798369L;
 
 scanner.nextInt() — reads an int
 
