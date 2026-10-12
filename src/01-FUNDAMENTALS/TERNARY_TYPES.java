@@ -73,5 +73,6 @@ public class TERNARY_TYPES {
         private String getResult() {
             return (score >= 50) ? "Pass" : "Fail";
         }
+        //recap needed
     }
 }
