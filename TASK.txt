@@ -1,1 +1,6 @@
- need to clean
+ need to learn
+
+
+
+
+ "pattern needs recap,char str convert and parse recap finalize ..end"git
