@@ -2,36 +2,46 @@ public class InterviewShapePatterns {
     public static void main(String[] args) {
 
         /*
-        WHY NO '*' ON EVERY LINE?
-        Java only cares about the start (slash-star) and end (star-slash).
-        Any extra stars in the middle are just for visual style.
-        You don't actually need them!
+        PATTERN CHEAT SHEET:
+        - Outer loop (i) = rows down
+        - Spaces loop (s) = push right: (n - i)
+        - Inner loop (j) = columns across
+        - println() = jump to next line
+
+        QUICK TRICKS:
+        - Normal triangle: j <= i
+        - Inverted triangle: j <= (n - i + 1)
+        - Pyramid (odd stars): j <= (2 * i - 1)
+        - Repeat row: print(i + " ")
+        - Count columns: print(j + " ")
+        - Continuous count: print(counter++ + " ")
+        - Hollow: if on edge print "* ", else print "  "
         */
 
         int n = 5;
 
         /*
         === 1. NUMBER RECTANGLE ===
-        Outer loop = rows down , Inner loop = columns. right
+        Outer = rows down, Inner = columns right.
         Output:
         1 2 3 4 5 6
         1 2 3 4 5 6
         1 2 3 4 5 6
         1 2 3 4 5 6
         */
-        for (int i = 1; i <= 4; i++) //row
-        {
-            for (int j = 1; j <= 6; j++)//column
-            {
+        System.out.println("=== 1. NUMBER RECTANGLE ===");
+        for (int i = 1; i <= 4; i++) { // rows
+            for (int j = 1; j <= 6; j++) { // columns
                 System.out.print(j + " ");
             }
             System.out.println();
         }
+        System.out.println();
 
 
         /*
         === 2. STAR RIGHT TRIANGLE ===
-        Inner loop runs 'i' times (row number = star count).
+        Row number = number of stars (row 1 has 1, row 2 has 2...).
         Output:
         *
         * *
@@ -39,17 +49,19 @@ public class InterviewShapePatterns {
         * * * *
         * * * * *
         */
+        System.out.println("=== 2. STAR RIGHT TRIANGLE ===");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
+        System.out.println();
 
 
         /*
         === 3. REPEATING NUMBER TRIANGLE ===
-        Prints the row number (i) instead of a star.
+        Same loop as star triangle, just print 'i' instead of '*'.
         Output:
         1
         2 2
@@ -57,17 +69,19 @@ public class InterviewShapePatterns {
         4 4 4 4
         5 5 5 5 5
         */
+        System.out.println("=== 3. REPEATING NUMBER TRIANGLE ===");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(i + " ");
             }
             System.out.println();
         }
+        System.out.println();
 
 
         /*
         === 4. INVERTED STAR TRIANGLE ===
-        Inner loop counts backwards. Row 1 gets 5 stars, Row 2 gets 4, etc.
+        Formula: (n - i + 1) decreases star count on each row.
         Output:
         * * * * *
         * * * *
@@ -75,17 +89,19 @@ public class InterviewShapePatterns {
         * *
         *
         */
+        System.out.println("=== 4. INVERTED STAR TRIANGLE ===");
         for (int i = 1; i <= n; i++) {
-            for (int j = n; j >= i; j--) {
+            for (int j = 1; j <= (n - i + 1); j++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
+        System.out.println();
 
 
         /*
         === 5. FLOYD'S TRIANGLE ===
-        Uses a separate counter that never resets.
+        Counter is placed OUTSIDE the loops so it keeps increasing.
         Output:
         1
         2 3
@@ -93,6 +109,7 @@ public class InterviewShapePatterns {
         7 8 9 10
         11 12 13 14 15
         */
+        System.out.println("=== 5. FLOYD'S TRIANGLE ===");
         int counter = 1;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
@@ -101,11 +118,12 @@ public class InterviewShapePatterns {
             }
             System.out.println();
         }
+        System.out.println();
 
 
         /*
         === 6. HOLLOW SQUARE ===
-        Prints stars only on the first/last row or first/last column.
+        Only print star if on first/last row or first/last column.
         Output:
         * * * * *
         *       *
@@ -113,21 +131,45 @@ public class InterviewShapePatterns {
         *       *
         * * * * *
         */
+        System.out.println("=== 6. HOLLOW SQUARE ===");
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 if (i == 1 || i == n || j == 1 || j == n) {
                     System.out.print("* ");
                 } else {
-                    System.out.print("  "); // 2 spaces for the empty center
+                    System.out.print("  "); // empty middle
                 }
             }
             System.out.println();
         }
+        System.out.println();
 
 
         /*
-        === 7. STAR DIAMOND ===
-        Combines a normal pyramid and an upside-down pyramid.
+        === 7. SOLID CENTERED PYRAMID ===
+        Spaces decrease (n - i), stars increase odd (2 * i - 1).
+        Output:
+            *
+          * * *
+        * * * * *
+        */
+        System.out.println("=== 7. SOLID CENTERED PYRAMID ===");
+        int pSize = 3;
+        for (int i = 1; i <= pSize; i++) {
+            for (int s = 1; s <= (pSize - i); s++) { // spaces
+                System.out.print("  ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) { // odd stars
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+
+        /*
+        === 8. STAR DIAMOND ===
+        Top pyramid (1 to size) + bottom pyramid mirror (size - 1 down to 1).
         Output:
             *
           * * *
@@ -135,11 +177,12 @@ public class InterviewShapePatterns {
           * * *
             *
         */
-        int size = 3; // Smaller size for a compact diamond
+        System.out.println("=== 8. STAR DIAMOND ===");
+        int size = 3;
 
         // Top half
         for (int i = 1; i <= size; i++) {
-            for (int j = i; j <= size; j++) {
+            for (int s = 1; s <= (size - i); s++) {
                 System.out.print("  ");
             }
             for (int k = 1; k <= (2 * i - 1); k++) {
@@ -150,7 +193,7 @@ public class InterviewShapePatterns {
 
         // Bottom half
         for (int i = size - 1; i >= 1; i--) {
-            for (int j = size; j >= i; j--) {
+            for (int s = 1; s <= (size - i); s++) {
                 System.out.print("  ");
             }
             for (int k = 1; k <= (2 * i - 1); k++) {
@@ -160,3 +203,4 @@ public class InterviewShapePatterns {
         }
     }
 }
+
