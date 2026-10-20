@@ -1,4 +1,9 @@
 import java.util.Scanner; // import brings Scanner into this file; java.util is its package.
+// live-template was made so sop for print since sout has println so ok
+
+
+
+
 
 // java.lang is imported automatically, so we can use System without importing it.
 public class BASIC_INFO { // public means other code can access it; class starts a class; name must match the file.
