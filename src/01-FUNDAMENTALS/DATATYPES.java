@@ -1,20 +1,26 @@
 import java.util.*;
 public class DATATYPES {
+//class is reppresent of object,collection of obj
+    //obj is real world entity
 
+
+    //heap,stack,static =memory types
+//keyword=pre-defined words known by compiler
+// class is non_primitive dt
     public static void main(String[] args){
           /*
            * Java data types:
            * Primitive types store simple values. Their values are not always stored on the stack;
            * where a value lives depends on how it is used.
-           *
-           * byte    1 byte    small whole numbers
-           * short   2 bytes   whole numbers
-           * int     4 bytes   whole numbers
-           * long    8 bytes   large whole numbers (use L for the suffix, like 123L)
-           * float   4 bytes   decimal numbers (use f for the suffix, like 3.14f)
-           * double  8 bytes   decimal numbers with more precision than float
-           * char    2 bytes   one UTF-16 code unit, written in single quotes like 'A'
-           * boolean           true or false; Java does not define its storage size
+           * //use dt type based on range values
+           * byte    1 byte     -126, 127(range) small whole numbers
+           * short   2 bytes                whole numbers
+           * int     4 bytes                whole numbers
+           * long    8 bytes                large whole numbers (use L for the suffix, like 123L)
+           * float   4 bytes                decimal numbers (use f for the suffix, like 3.14f) //32 bites
+           * double  8 bytes                decimal numbers with more precision than float //64 bites
+           * char    2 bytes                one UTF-16 code unit, written in single quotes like 'A'
+           * boolean                         true or false; Java does not define its storage size
            *
            * String, arrays, and other objects are reference types, not primitive types.
            * A reference variable refers to an object; Java does not promise that every
@@ -57,7 +63,7 @@ scanner.nextLine() — reads an entire line of text as a String
 
          //double pie=3.124;also 3=output is 3.0 ok
 
-        // double p=3.12f;//float
+         double p=3.12f;//float
         boolean  isClass=true;
         //rule camelcase firstlower then varname first caps eg isBody
         //boolean has t/f only
@@ -123,7 +129,8 @@ In Java (and most programming languages), counting starts at 0 instead of 1.
         }
 
 
-
 sc.close();
     }
 }
+
+

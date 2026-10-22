@@ -1,6 +1,4 @@
- need to learn
+ need to learn range of dt and update code,garbage/default values of dt
 
+ "pattern tracing,next topic"
 
-
-
- "pattern needs recap,char str convert and parse recap finalize ..end"git
