@@ -1,164 +1,143 @@
+
 import java.util.Arrays;
-// optional import only need for array methods etc so or static methods so
+
 public class ARRAYS {
+
     public static void main(String[] args) {
-            /*
-             * JAVA ARRAYS
-             *
-             * An array stores multiple values of the same data type
-             * using a single variable.
-             *
-             * Visual example:
-             *
-             *  Array: marks
-             *
-             *  Index    0       1       2       3       4
-             *        +-------+-------+-------+-------+-------+
-             *  Value |  70   |  80   |  90   |  85   |  75   |
-             *        +-------+-------+-------+-------+-------+
-             *
-             * Index starts at 0, so the last index is length - 1.
-             * Har box ek element store karta hai.
-             */
 
-            int[] marks = {70, 80, 90, 85, 75};
-            /*
-             * 1. CREATING AN ARRAY
-
-             * Method 1: Declare and initialize together.
-             * int[] means an integer array.
-             * {} contains the initial values.
-             */
-            int[] numbers = {10, 20, 30, 40, 50};
-            /*
-             * Method 2: Create an array with a fixed size first.
-             * new int[3] creates 3 integer positions.
-             * Default int values are 0 until we assign new values.
-             */
-            int[] scores = new int[3];
-
-            scores[0] = 75;
-            scores[1] = 85;
-            scores[2] = 95;
-
-            // Update an existing element: arrayName[index] = value.
-            scores[0] = 80;
-            /*
-             * 2. DIFFERENT ARRAY TYPES
-
-             * The declared type determines the type of each element.
-             */
-            int[] ages = {20, 21, 22};
-            double[] prices = {10.5, 25.75, 99.99};
-            char[] letters = {'J', 'A', 'V', 'A'};
-            String[] fruits = {"Apple", "Mango", "Orange"};
-            boolean[] results = {true, false, true};
-            /*
-             * 3. PRINTING AN ARRAY
-
-             * Printing an array directly does not print its elements.
-             * Java displays a type-and-identity-style representation.
-             * Isliye values dekhne ke liye Arrays.toString() use karte hain.
-             */
-            System.out.println(numbers);
-            System.out.println(Arrays.toString(numbers));
-            /*
-             * 4. ACCESSING AND UPDATING ELEMENTS
-
-             * Use arrayName[index] to access a specific element.
-             * Indexing starts at 0.
-             */
-            System.out.println(numbers[0]); // 10
-            System.out.println(numbers[2]); // 30
-
-            numbers[1] = 25;
-            System.out.println(Arrays.toString(numbers));
-            // Invalid indexes cause ArrayIndexOutOfBoundsException.
         /*
-             * 5. NORMAL FOR LOOP
+         * JAVA ARRAYS
+         *
+         * An array stores multiple elements of the same declared type.
+         * Its length is fixed after creation, and indexing starts at 0.
+         *
+         * Index:  0    1    2    3    4
+         * Value: 70   80   90   85   75
+         */
 
-             * i represents the index.
-             * The loop visits each valid index from 0 to length - 1.
-             */
-            for (int i = 0; i < numbers.length; i++) {
-                System.out.println(numbers[i]);
-            }
-            /*
-             * 6. ENHANCED FOR LOOP
+        // 1. CREATING ARRAYS
 
-             * The loop gets each element directly.
-             * Index ki zaroorat nahi hoti when we only read values.
-             */
-            for (int number : numbers) {
-                System.out.println(number);
-            }
-            /*
-             * 7. ARRAY LENGTH
+        // Way 1: Declare and initialize with values.
+        int[] marks = {70, 80, 90, 85, 75};
 
-             * length is a property, not a method.
-             * Correct: numbers.length
-             * Incorrect: numbers.length()
-             */
-            System.out.println("Length: " + numbers.length);
+        // Way 2: Create a fixed-size array, then assign values.
+        int[] scores = new int[3]; // Default int values are 0.
+        scores[0] = 75;
+        scores[1] = 85;
+        scores[2] = 95;
 
-            /*
-             * 8. ARRAYS UTILITY METHODS
+        scores[0] = 80; // Update an existing element.
 
-             * Arrays is a utility class from java.util.
-             * Its static methods can be called using the class name.
+        // Way 3: Declare first and initialize later.
+        int[] numbers;
+        numbers = new int[] {10, 20, 30, 40, 50};
 
-             * static means the method belongs to the class itself,
-             * rather than to an individual object.
-             */
-            int[] values = {50, 10, 40, 20, 30};
+        // 2. DIFFERENT ARRAY TYPES
 
-            Arrays.sort(values);
-            System.out.println(Arrays.toString(values));
+        double[] prices = {10.5, 25.75, 99.99};
+        char[] letters = {'J', 'A', 'V', 'A'};
+        String[] fruits = {"Apple", "Mango", "Orange"};
+        boolean[] results = {true, false, true};
 
-            // sort() changes the original array into ascending order.
-            // toString() returns a readable representation of its elements.
+        // 3. PRINTING AN ARRAY
 
+        // Direct printing does not display the elements as a list.
+        System.out.println(numbers);
 
-            /*
-             * 9. IMPORTANT INTERVIEW Q&A
-             *
-             * Q1. What is an array?
-             * An object that stores a fixed number of elements
-             * of the same declared type.
-             *
-             * Q2. What is the first index?
-             * Index 0.
-             *
-             * Q3. Can an array grow automatically?
-             * No. Its length is fixed after creation.
-             *
-             * Q4. What happens when an invalid index is accessed?
-             * Java throws ArrayIndexOutOfBoundsException.
-             *
-             * Q5. What is the difference between length and length()?
-             * Arrays use the length property.
-             * String uses the length() method.
-             *
-             * Q6. Why does printing an array directly look unusual?
-             * It does not automatically print the elements.
-             * Use Arrays.toString() or a loop.
-             *
-             * Q7. What is the difference between a normal and
-             * an enhanced for loop?
-             * A normal loop can use indexes; an enhanced loop
-             * directly visits each element.
-             *
-             * Q8. What does Arrays.sort() do?
-             * It sorts array elements into ascending order.
-             *
-             * Q9. Can an array store different types together?
-             * A normal array has one declared element type.
-             *
-             * Q10. Is String a primitive type?
-             * No. String is a reference type.
-             */
+        // Way 1: Print all elements in one readable line.
+        System.out.println(Arrays.toString(numbers));
 
-
-
+        // Way 2: Normal for loop — useful when indexes are needed.
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
         }
+
+        // Way 3: Enhanced for loop — directly reads each element.
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+
+        // Print all values on one line.
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+        System.out.println();
+
+        // 4. ACCESSING ELEMENTS AND ARRAY LENGTH
+
+        System.out.println(numbers[0]); // First element: 10
+        System.out.println(numbers[2]); // Third element: 30
+        System.out.println("Length: " + numbers.length);
+
+        numbers[1] = 25;
+        System.out.println(Arrays.toString(numbers));
+
+        // Invalid indexes cause ArrayIndexOutOfBoundsException.
+        // Arrays use .length; Strings use .length().
+
+        // 5. ARRAYS UTILITY METHODS
+
+        int[] values = {50, 10, 40, 20, 30};
+
+        Arrays.sort(values); // Sorts the original array ascending.
+        System.out.println(Arrays.toString(values));
+
+        // Arrays is a utility class; static methods use the class name.
+        // toString() returns a readable String representation of values.
+
+        // 6. FINDING THE MAXIMUM VALUE
+
+        int[] data = {12, 45, 7, 89, 23};
+        int largest = data[0];
+
+        // Index 0 is already used to initialize largest, so start at 1.
+        for (int i = 1; i < data.length; i++) {
+            if (data[i] > largest) {
+                largest = data[i];
+            }
+        }
+
+        System.out.println("Largest: " + largest);
+
+        // If the condition is false, the if-block is skipped.
+        // The loop continues with the next index.
+
+        // 7. TWO-DIMENSIONAL ARRAYS
+
+        int[][] studentMarks = {
+            {70, 80},
+            {85, 90},
+            {60, 75}
+        };
+
+        System.out.println(Arrays.deepToString(studentMarks));
+
+        // Outer length = rows; inner length = columns in that row.
+        for (int i = 0; i < studentMarks.length; i++) {
+            for (int j = 0; j < studentMarks[i].length; j++) {
+                System.out.print(studentMarks[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        // 8. QUICK REVISION
+
+        /*
+         * 1. Arrays store elements of one declared type.
+         * 2. The first index is 0; the last is length - 1.
+         * 3. Array length is fixed after creation.
+         * 4. Arrays.toString() prints a 1D array readably.
+         * 5. Arrays.deepToString() handles nested arrays.
+         * 6. Arrays.sort() sorts values in ascending order.
+         * 7. A normal for loop can use indexes; enhanced for
+         *    directly visits each element.
+         * 8. String is a reference type, not a primitive type.
+         * 9. new int[3] creates three integer positions,
+         *    initialized to 0 by default.
+         * 10. int[][] represents an array of arrays; rows can
+         *     have different lengths.
+         */
+
+      
     }
+}
