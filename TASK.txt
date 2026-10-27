@@ -2,19 +2,17 @@
 
  "pattern tracing,next topic"
 
- /*
-              * 10. TOMORROW'S LEARNING PLAN
-              *
-              * These topics are for the next session, not today's
-              * completed work.
-              *
-              * 1. Take array size and elements using Scanner.
-              * 2. Calculate sum and average.
-              * 3. Find maximum and minimum elements.
-              * 4. Search for a value using linear search.
-              * 5. Reverse an array.
-              * 6. Learn Arrays.copyOf() and Arrays.equals().
-              * 7. Understand two-dimensional arrays and nested loops.
-              * 8. Solve beginner interview problems independently.
-              */
+   // 9. TOMORROW'S TASK LIST — ARRAY PRACTICE
 
+        /*
+         * [ ] 1. Take array size and elements using Scanner.
+         * [ ] 2. Calculate the sum and average.
+         * [ ] 3. Find the minimum and maximum values.
+         * [ ] 4. Search for an element using linear search.
+         * [ ] 5. Reverse an array.
+         * [ ] 6. Practise Arrays.copyOf() and Arrays.equals().
+         * [ ] 7. Practise 2D arrays and nested loops.
+         * [ ] 8. Solve beginner array problems independently.
+         *
+         * Goal: Understand the logic and write solutions yourself.
+         */
