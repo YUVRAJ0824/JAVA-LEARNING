@@ -1,4 +1,5 @@
-public class workout_sheet {
+public class shapes
+{
     public static void main(String[] args)
     {
         System.out.println("square signs");
@@ -79,10 +80,6 @@ public class workout_sheet {
             }
             System.out.println();
         }
-
-
-
-
 
     }
 }
