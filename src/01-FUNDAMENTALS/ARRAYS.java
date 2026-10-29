@@ -183,6 +183,51 @@ public class ARRAYS {
          * [ ] 8. Learn matrix addition and subtraction.
          * [ ] 9. Learn matrix multiplication after the basics.
          */
-        System.out.print("testing");
+        /*System.out.print("testing");
+Enter array size: 3
+Enter number 1: 12
+Enter number 2: 24
+Enter number 3: 36
+Your array: [12, 24, 36]*/
+/*
+
+         * TASK: Read the array size and elements from the user,
+
+         * then display the completed array.
+
+         */
+
+        // Step 1: Create Scanner to read keyboard input.
+
+        Scanner sc = new Scanner(System.in);
+
+        // Step 2: Read how many elements the array will contain.
+
+        System.out.print("Enter array size: ");
+
+        int size = sc.nextInt();
+
+        // Step 3: Create an array using the entered size.
+
+        int[] numbers = new int[size];
+
+        // Step 4: Read and store each element.
+
+        for (int i = 0; i < numbers.length; i++) {
+
+            System.out.print("Enter number " + (i + 1) + ": ");
+
+            numbers[i] = sc.nextInt();
+
+        }
+
+        // Step 5: Display all elements in a readable format.
+
+        System.out.println("Your array: " + Arrays.toString(numbers));
+
+        // Step 6: Close Scanner after input is complete.
+
+        sc.close();
+
     }
 }
