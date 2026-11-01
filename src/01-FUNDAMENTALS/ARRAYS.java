@@ -57,7 +57,7 @@ Har box ek element store karta hai.
 
         //method 2- method style
         //pre fixed size,manual assigin,empty is replaced with default values
-        
+
         //int[] marks2=new int[]; wrong - array dimension  missing error
 
         int[] marks2=new int[5];
@@ -70,10 +70,10 @@ Har box ek element store karta hai.
         marks2[1]=20;
         marks2[3]=40;
         System.out.print("\n After missed index 1,3 :"+Arrays.toString(marks2));
-        
+
         //display array elements 2 ways
-        
-        
+
+
         //solo elements - using index
         System.out.println("\nmarks2 index 2:"+marks2[2]); //index 2 value of array marks2
 
@@ -90,12 +90,12 @@ Har box ek element store karta hai.
         //here Arrays =utility class
 
         /* IMP
- Expression	            What it is
-marks.length	        Array field
-marks.length()	        Invalid
-Arrays.length	        Invalid
-Arrays.toString(marks)	Static method
-Arrays.sort(marks)	    Static method
+ Expression             What it is
+marks.length            Array field
+marks.length()          Invalid
+Arrays.length           Invalid
+Arrays.toString(marks)  Static method
+Arrays.sort(marks)      Static method
 
 
 length → Field
@@ -127,9 +127,9 @@ Arrays → Utility class
         //we use wrapper obj --future learning
 
 
-System.out.print("\n");
+        System.out.print("\n");
         // largest and smallest elements in an array (min,max)
-System.out.print("arrays was 10,30,20,40 \n");
+        System.out.print("arrays was 10,30,20,40 \n");
         //largest   >=,>
         int[] max={10,30,20,40};
         int large=max[0];
@@ -140,7 +140,7 @@ System.out.print("arrays was 10,30,20,40 \n");
             }
         }
         System.out.println("largest element in array:"+large);
-System.out.print("\n");
+        System.out.print("\n");
 //:: rule change signs at for and if section
         //smallest  <=,<
         int[] min={10,30,20,40};
@@ -159,9 +159,9 @@ System.out.print("\n");
         System.out.println("add={10,30,20,40}");
         int sum=0;
         for(int i=1;i<add.length;i++)
-            {
-                sum=sum+add[i];
-            }
+        {
+            sum=sum+add[i];
+        }
 
         System.out.println("sum element in array:"+sum);
 
@@ -189,6 +189,6 @@ Average = 100/4 = 25
 
         // avg=sum/array-size ,sum=add of array elements tho so
 
-        //recap is bal
+        //recap is bal tho
     }
 }
