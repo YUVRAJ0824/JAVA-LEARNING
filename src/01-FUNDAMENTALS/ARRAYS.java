@@ -7,6 +7,8 @@ public class ARRAYS {
     public static void main(String[] args) {
 
 // min,max,sum,avg,sort,search,traversal == array operations
+        //ascending  small to big
+        //descending  big to small
 
       /*
 JAVA ARRAYS
@@ -190,5 +192,53 @@ Average = 100/4 = 25
         // avg=sum/array-size ,sum=add of array elements tho so
 
         //recap is bal tho
+
+
+
+        //2d array
+        int[][] two_d=new int[5][5];
+        //two_d[i][j]
+        //i=row,j=col
+        //int[row][col]
+
+        two_d[1][0]=10;
+        two_d[0][1]=01;
+System.out.println(two_d[1][0]);
+        for(int i=0;i< two_d.length;i++) //count rows
+            for(int j=0;j<two_d.length;j++)
+            System.out.print(" "+two_d[i][j]);
+        System.out.print("\n ______");
+        System.out.println("2d display using deepToString():"+Arrays.deepToString(two_d));
+
+//A Jagged Array means each row can have a different number of columns (elements).
+       // int[][] jagged=new int[3][];
+       // so the block size changed into big mid small etc so ?
+
+
+        int[][] jagged = new int[3][];
+
+        jagged[0] = new int[5]; // Big row
+        jagged[1] = new int[2]; // Small row
+        jagged[2] = new int[3]; // Medium row
+System.out.print("jagged");
+        System.out.println(Arrays.deepToString(jagged));
+// jagged has empty i so we put tostr();
+
+        System.out.println(Arrays.toString(jagged[0]) + "\n"
+                + Arrays.toString(jagged[1]) + "\n"
+                + Arrays.toString(jagged[2]));
+        System.out.print(Arrays.toString(jagged[0]););// single row display
+
+        //deepToString=handles  nested(i,j) based arrays
+//due more then on var etc o we do deeptoString so  and in deep t is caps where normal is t is samll
+
+   /*
+What you're printing	              Data type	Method
+One normal array	                    int[]	Arrays.toString()
+One row of a 2D array	                int[]	Arrays.toString()
+Complete 2D array	                 int[][]	Arrays.deepToString()
+Complete Jagged Array	             int[][]	Arrays.deepToString()
+    */
+
     }
 }
