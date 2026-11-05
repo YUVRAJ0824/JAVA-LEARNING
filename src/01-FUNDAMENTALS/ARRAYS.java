@@ -227,7 +227,7 @@ System.out.print("jagged");
         System.out.println(Arrays.toString(jagged[0]) + "\n"
                 + Arrays.toString(jagged[1]) + "\n"
                 + Arrays.toString(jagged[2]));
-        System.out.print(Arrays.toString(jagged[0]););// single row display
+        System.out.print(Arrays.toString(jagged[0]));// single row display
 
         //deepToString=handles  nested(i,j) based arrays
 //due more then on var etc o we do deeptoString so  and in deep t is caps where normal is t is samll
