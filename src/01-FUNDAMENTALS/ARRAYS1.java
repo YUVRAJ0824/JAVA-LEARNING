@@ -1,8 +1,7 @@
 
 import java.util.Arrays;
-import java.util.Scanner;
 
-public class ARRAYS {
+public class ARRAYS1 {
 
     public static void main(String[] args) {
 
